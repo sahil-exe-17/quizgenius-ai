@@ -1,8 +1,6 @@
-import { PrismaClient } from "@prisma/client";
 import { notFound } from "next/navigation";
+import { prisma } from "@/lib/db";
 import QuizView from "./QuizView";
-
-const prisma = new PrismaClient();
 
 export default async function QuizPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
