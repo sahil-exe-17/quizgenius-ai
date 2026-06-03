@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "AI-powered web application that allows users to upload educational PDFs and automatically generates quizzes, question banks, and flashcards.",
 };
 
+import SplashScreen from "@/components/SplashScreen";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +24,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <SplashScreen />
         <nav style={{ padding: '1rem 2rem', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <h1 style={{ fontSize: '1.25rem', fontWeight: 700 }} className="text-gradient">QuizForge AI</h1>
           <div>
